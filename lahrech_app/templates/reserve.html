@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %} reservation {% endblock %}
+{%load static%}
+{% block content %}
+<div class="container">
+    <div class="heading">
+        <span class="icon-logo"><img src="{% static 'images/icon-logo.png' %}" alt="#"></span>
+        <h2> حجز </h2>
+    </div>
+   
+    <div class="row">
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">name </th>
+            <th scope="col">phone</th>
+            <th scope="col">period</th>
+            <th scope="col">message</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        {% for reserv in table %}
+        <tr>
+            <th scope="row">{{ reserv.number}}</th>
+            <td>{{reserv.name}}</td>
+            <td>{{ reserv.phone}}</td>
+            <td>{{ reserv.time }}</td>
+            <td>{{ reserv.message }}</td>
+
+        </tr>
+        {%endfor%}
+        </tbody>
+    </table>
+    </div>
+
+<div class="form">
+    <form action="{% url 'reservation_table' %}" method="POST">
+
+        {% csrf_token %}
+        <fieldset>
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                <div class="row">
+                    <div class="form-group">
+                        <select class="form-control" name="day" required>
+                            <option value="">اليوم</option>
+                            <option value="Sunday">الأحد</option>
+                            <option value="Monday">الإثنين</option>
+                            <option value="Tuesday">الثلاثاء</option>
+                            <option value="Wednesday">الأربعاء</option>
+                            <option value="Thursday">الخميس</option>
+                            <option value="Friday">الجمعة</option>
+                            <option value="Saturday">السبت</option>
+
+                        </select>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="form-group">
+                        <div class="center"><button type="submit">إرسال</button></div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    
+   </div>
+
+</div>
+
+  {% endblock %}

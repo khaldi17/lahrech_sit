@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block title %}إضافة مقال جديد{% endblock %}
+
+{% block content %}
+<div class="container" style="direction: rtl; text-align: right;">
+    <div class="heading">
+        <span class="icon-logo"><img src="{% static 'images/icon-logo.png' %}" alt="#"></span>
+        <h2>إضافة مقال جديد</h2>
+    </div>
+  
+
+    <!-- Check if the user is a superadmin before displaying the form -->
+    {% if superadmin %}
+    <form method="post" enctype="multipart/form-data" style="text-align: right;">
+        {% csrf_token %}  <!-- Django's security token to prevent CSRF attacks -->
+        
+        <!-- Form for creating a new blog post -->
+        <div class="form-group">
+            <label for="title">العنوان</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="أدخل عنوان المقال" required>
+        </div>
+
+        <div class="form-group">
+            <label for="content">المحتوى</label>
+            <textarea class="form-control" id="content" name="content" rows="6" placeholder="أدخل محتوى المقال" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="author">المؤلف</label>
+            <select class="form-control" id="author" name="author" required>
+                {% for user in authors %}
+                    <option value="{{ user.id }}">{{ user.username }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="image">صورة المقال</label>
+            <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+        </div>
+
+        <hr class="hr1">
+
+        <button type="submit"  class="btn btn-light btn-radius btn-brd grd1 effect-1" style="float: right;">إضافة المقال</button>
+    </form>
+    
+    
+    {% endif %}
+</div>
+{% endblock %}

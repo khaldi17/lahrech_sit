@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog and Articles{% endblock %}
+
+{% block content %}
+{% load static%}
+
+
+
+
+
+    <div id="home" class="parallax first-section wow fadeIn" data-stellar-background-ratio="0.4" style="background-image:url('{% static 'images/slider-bg.png' %}');">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 col-sm-12">
+                  <div class="text-contant">
+                      <h2>
+                          <span class="center"><span class="icon"><img src="{% static 'images/logo.png' %}" alt="#" /></span></span>
+                          <a href="" class="typewrite" data-period="2000" data-type='[ "Dr Lahrech Hamza", "We Care Your Health", "We are Expert!" ]'>
+                              <span class="wrap"></span>
+                          </a>
+                      </h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div id="time-table" class="time-table-section">
+    <div class="container">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="service-time one" style="background: #cd3d6e;">
+                    <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
+                    <h3>حالات الطوارئ</h3>
+                    <p>نحن هنا لدعمك في حالات الاستعجالات  الطبية، حيث نقدم خدمات رعاية فورية لضمان سلامتك.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="service-time middle" style="background: #c92d62;">
+                    <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span> 
+                    <h3>ساعات العمل</h3>
+                    <div class="time-table-section">
+                        <ul>
+                            <li><span class="right">الاحد - الأربعاء</span><span class="left">08:00 – 16:00</span></li>
+                            <li><span class="right">الخميس</span><span class="left">08:00 – 14:00</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="service-time three" style="background: #971944;">
+                    <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
+                    <h3>جدول العيادة</h3>
+                    <p>نقدم لك جدولا زمنيا مرنا لمواعيدك، حيث يمكنك حجز المواعيد لتلقي الرعاية الصحية في الوقت المناسب.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  
+  <div id="about" class="section wow fadeIn">
+      <div class="container">
+          <div class="heading">
+              <span class="icon-logo"><img src="{% static 'images/icon-logo.png' %}" alt="#"></span>
+              <h2></h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+                <div class="message-box" style="direction: rtl; text-align: right;">
+                    <h4>خدماتنا</h4>
+                    <h2>خدمات العيادة</h2>
+                    <p class="lead">نقدم في العيادة رعاية طبية متخصصة وشاملة للمرأة باستخدام أحدث التقنيات الطبية لضمان أفضل النتائج.</p>
+                    <p>تتضمن خدماتنا متابعة الحمل، إيكوغرافي ثلاثي وثنائي الأبعاد (3D و 2D)، الولادة القيصرية، والجراحة بالمنظار بما في ذلك جراحة بالمنظار الرحمي. هدفنا هو تقديم رعاية عالية الجودة لجميع المرضى.</p>
+                    <a href="#service" class="btn btn-light btn-radius btn-brd grd1 effect-1">معرفة المزيد</a>
+                </div>
+            </div>
+            
+            
+            <div class="col-md-6">
+                <div class="post-media wow fadeIn">
+                    <video class="img-responsive" controls style="
+                    width: 460px;
+                    height: 360px;
+                ">
+                        <source src="{% static 'videos/hamza 11.mp4' %}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            
+          </div>
+          <hr class="hr1">
+          <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="service-widget">
+                      <div class="post-media wow fadeIn">
+                          <a href="{% static 'images/clinic_01.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                          <img src="{% static 'images/clinic_01.jpg' %}" alt="" class="img-responsive">
+                      </div>
+                      <h3>الولادة الطبيعية و الولادة بدون ألم </h3>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="service-widget">
+                      <div class="post-media wow fadeIn">
+                          <a href="{% static 'images/clinic_02.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                          <img src="{% static 'images/clinic_02.jpg' %}" alt="" class="img-responsive">
+                      </div>
+                      <h3>الولادة القيصرية</h3>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="service-widget">
+                      <div class="post-media wow fadeIn">
+                          <a href="{% static 'images/clinic_03.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                          <img src="{% static 'images/clinic_03.jpg' %}" alt="" class="img-responsive">
+                      </div>
+                      <h3>الجراحة بالمنظار الباطني و المنظار الرحمي</h3>
+                  </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                  <div class="service-widget">
+                      <div class="post-media wow fadeIn">
+                          <a href="{% static 'images/clinic_04.jpg' %}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="flaticon-unlink"></i></a>
+                          <img src="{% static 'images/clinic_04.jpg' %}" alt="" class="img-responsive">
+                      </div>
+                      <h3>خدمات الاستعجالات و الولادات  24س</h3>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  <div id="service" class="services wow fadeIn">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+            <div class="inner-services">
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serv">
+                       <span class="icon-service"><i class="fas fa-baby fa-3x"></i></span>
+                       <h4>متابعة الحمل</h4>
+                       <p>نقدم لكِ خدمة متابعة شاملة للحمل تشمل الفحوصات الدورية والتقييم الطبي لضمان صحة الأم والجنين.</p>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serv">
+                       <span class="icon-service"><i class="fas fa-heartbeat fa-3x"></i></span>
+                       <h4>3D,2D إيكوغرافي</h4>
+                       <p>نستخدم تقنيات الإيكوغرافي ثلاثي وثنائي الأبعاد لتقديم صور دقيقة وفحص شامل لنمو الجنين وتطوره.</p>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serv">
+                       <span class="icon-service"><i class="fas fa-procedures fa-3x"></i></span>
+                       <h4>ولادة قيصرية</h4>
+                       <p>نقدم خدمات الولادة القيصرية بطرق طبية متطورة لضمان سلامة الأم والطفل في الحالات الضرورية.</p>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serv">
+                       <span class="icon-service"><i class="fas fa-stethoscope fa-3x"></i></span>
+                       <h4>جراحة بالمنظار</h4>
+                       <p>نعتمد على تقنيات المنظار الجراحي لإجراء العمليات الدقيقة بأقل تدخل جراحي وأسرع فترة شفاء.</p>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serv">
+                       <span class="icon-service"><i class="fas fa-microscope fa-3x"></i></span>
+                       <h4>جراحة بالمنظار الرحمي</h4>
+                       <p>إجراء العمليات داخل الرحم باستخدام المنظار الرحمي لعلاج المشاكل النسائية بدقة وكفاءة.</p>
+                    </div>
+                 </div>
+                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="serv">
+                       <span class="icon-service"><i class="fas fa-syringe fa-3x"></i></span>
+                       <h4>استئصال الرحم</h4>
+                       <p>نقدم خدمة استئصال الرحم باستخدام أحدث التقنيات الطبية لضمان راحة المريض وتسريع الشفاء.</p>
+                    </div>
+                 </div>
+                 
+                 
+            </div>
+         </div>
+         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="appointment-form">
+               <h3><span>+</span> احجز موعدك</h3>
+               <div class="form">
+                <form action="{% url 'resarve' %}" method="POST">
+
+                    {% csrf_token %}
+                    <fieldset>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" placeholder="اسمك" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="form-group">
+                                    <input type="phone" name="phone" placeholder="رقم الهاتف" id="email" required />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
+                            <div class="row">
+                                <div class="form-group">
+                                    <select class="form-control" name="day" required>
+                                        <option value="">اليوم</option>
+                                        <option value="Sunday">الأحد</option>
+                                        <option value="Monday">الإثنين</option>
+                                        <option value="Tuesday">الثلاثاء</option>
+                                        <option value="Wednesday">الأربعاء</option>
+                                        <option value="Thursday">الخميس</option>
+                                        <option value="Friday">الجمعة</option>
+                                        <option value="Saturday">السبت</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" name="time" required>
+                                        <option value="">الوقت</option>
+                                        <option value="AM">صباحاً</option>
+                                        <option value="PM">مساءً</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="form-group">
+                                    <textarea rows="4" id="textarea_message" class="form-control" name="message" placeholder="رسالتك..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="row">
+                                <div class="form-group">
+                                    <div class="center"><button type="submit">إرسال</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+	  <!-- doctor -->
+<div id="doctors" class="parallax section db" data-stellar-background-ratio="0.4" style="background:#fff;" data-scroll-id="doctors" tabindex="-1">
+   <div class="container">
+       <div class="heading">
+           <span class="icon-logo"><img src="{% static 'images/icon-logo.png' %}" alt="#"></span>
+           <h2>الطبيب المختص</h2>
+       </div>
+
+       <div class="row dev-list text-center">
+           
+
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeIn;">
+            <div class="widget clearfix">
+                <img src="{% static 'images/doctor_01.jpg' %}" alt="" class="img-responsive img-rounded">
+                <div class="widget-title">
+                    <h3>Dr Lahrech Hamza</h3>
+                    <small>أخصائي ممارس في طب وجراحة النساء و التوليد</small>
+                </div>
+                <p>طبيب مختص خريج جامعة البليدة انا هنا لاقدم لكم خدمات صحية نوعية و متميزة</p>
+        
+                <div class="footer-social">
+                    <a href="#" class="btn grd1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                      </svg></a>
+                    <a href="#" class="btn grd1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                      </svg></a>
+                </div>
+                
+            </div><!--widget -->
+        </div><!-- end col -->
+        
+
+           
+       </div><!-- end row -->
+   </div><!-- end container -->
+</div>
+<!-- end doctor section -->
+
+	  
+<div id="getintouch" class="section wb wow fadeIn" style="padding-bottom:0;">
+   <div class="container">
+       <div class="heading">
+           <span class="icon-logo"><img src="{% static 'images/icon-logo.png' %}" alt="#"></span>
+           <h2>Get in Touch</h2>
+       </div>
+   </div>
+   <div class="contact-section">
+       <div class="form-contant">
+           <form id="ajax-contact" action="{% url 'mailer_view' %}" method="post">
+               {% csrf_token %}
+               <div class="row">
+                   <div class="col-md-6">
+                       <div class="form-group in_name">
+                           <input type="text" class="form-control" placeholder="Name" required="required" name="name">
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="form-group in_email">
+                           <input type="email" class="form-control" placeholder="E-mail" required="required" name="email">
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="form-group in_email">
+                           <input type="tel" class="form-control" id="phone" placeholder="Phone" required="required" name="phone">
+                       </div>
+                   </div>
+                   <div class="col-md-6">
+                       <div class="form-group in_email">
+                           <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" name="subject">
+                       </div>
+                   </div>
+                   <div class="col-md-12">
+                       <div class="form-group in_message"> 
+                           <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" name="message"></textarea>
+                       </div>
+                       <div class="actions">
+                           <input type="submit" value="Send Message" name="submit" id="submitButton" class="btn small" title="Submit Your Message!">
+                       </div>
+                   </div>
+               </div>
+           </form>
+           
+       </div>
+       
+   </div>
+</div>
+
+{% endblock %}

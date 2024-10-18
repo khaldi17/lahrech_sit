@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog and Articles{% endblock %}
+{%load static%}
+{% block content %}
+<div class="container">
+    <div class="heading">
+        <span class="icon-logo"><img src="{% static 'images/icon-logo.png' %}" alt="#"></span>
+        <h2>مدونة ومقالات</h2>
+    </div>
+
+    {% if superadmin %}
+        <div class="add-blog" style="direction: rtl; text-align: right;">
+            <a href="{% url 'blog_create' %}" class="btn btn-light btn-radius btn-brd grd1 effect-1">إضافة مقال جديد</a>
+        </div>
+        <hr class="hr1">
+    {% endif %}
+    {% if blogs %}
+    {% for blog in blogs %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="message-box" style="direction: rtl; text-align: right;">
+                <h4>{{ blog.author.username }}</h4>  <!-- Display author's username -->
+                <h2>{{ blog.title }}</h2>
+                <p class="lead">{{ blog.content|truncatewords:30 }}</p>  <!-- Display a brief intro with 30 words -->
+                
+                <a href="/blog/{{ blog.id }}" class="btn btn-light btn-radius btn-brd grd1 effect-1">معرفة المزيد</a>
+            </div>
+        </div>
+      
+        <div class="col-md-6">
+            <div class="post-media wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                <img src="{{ blog.image.url }}" alt="{{ blog.title }}" class="img-responsive">  <!-- Dynamic image here -->
+            </div>
+        </div>
+    </div>
+    <hr class="hr1">
+{% endfor %}
+
+    {% endif %}
+    {% if blog %}
+    
+        <div class="row">
+            <div class="col-md-12">
+                <div class="message-box" style="direction: rtl; text-align: right;">
+                    <h4>المؤلف: {{ blog.author.username }}</h4>
+                    <h2>{{ blog.title }}</h2>
+                    <div class="blog-content">
+                        {{ blog.content|linebreaks }} <!-- This filter ensures paragraphs and lists are properly formatted -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+    {% endif %}
+
+</div>
+{% endblock %}

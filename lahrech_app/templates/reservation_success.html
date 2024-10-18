@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .ticket {
+            background-color: #fff;
+            border: 2px dashed #ccc;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .ticket h1 {
+            color: #2ecc71;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .ticket p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .ticket .number {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+        .ticket .details {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ticket">
+        <h1>Reservation Confirmed</h1>
+        <p>Your reservation number is</p>
+        <p class="number">{{ number }}</p>
+        <div class="details">
+            <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Phone:</strong> {{ phone }}</p>
+            <p><strong>Date:</strong> {{ day }}</p>
+            <p><strong>Time:</strong> {{ time }}</p>
+            <p><strong>Message:</strong> {{ message }}</p>
+        </div>
+        <a href="/" class="button">Back to Home</a>
+    </div>
+
+</body>
+</html>
